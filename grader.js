@@ -58,20 +58,18 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 };
 
 var checkURL = function(url, checksfile) {
-	var result = rest.get(url).on('complete', function(response) {
- 		response;
-		});
-	console.log(result);
-
-	$ = cheerio.load(result);
- 	var checks = loadChecks(checksfile).sort();
- 	var out = {};
- 	for(var ii in checks) {
- 		var present = $(checks[ii]).length > 0;
- 		out[checks[ii]] = present;
- 	}
-	return out;
- };
+	rest.get(url).on('complete', function(response) {
+		$ = cheerio.load(response);
+ 		var checks = loadChecks(checksfile).sort();
+ 		var out = {};
+ 		for(var ii in checks) {
+ 			var present = $(checks[ii]).length > 0;
+ 			out[checks[ii]] = present;
+ 		}
+		var outJson = JSON.stringify(out, null, 4);
+ 		console.log(outJson);	
+	});	
+};
 
 var clone = function(fn) {
     // Workaround for commander.js issue.
@@ -88,13 +86,12 @@ if(require.main == module) {
 
     //Set the checkJson variable
 	if(program.url) {
-		var checkJson = checkURL(program.url, program.checks);
+		checkURL(program.url, program.checks);
     } else {
     	var checkJson = checkHtmlFile(program.file, program.checks);
+		var outJson = JSON.stringify(checkJson, null, 4);
+		console.log(outJson);
     } //end IF
-
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
