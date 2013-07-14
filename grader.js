@@ -67,7 +67,9 @@ var checkURL = function(url, checksfile) {
  			out[checks[ii]] = present;
  		}
 		var outJson = JSON.stringify(out, null, 4);
- 		console.log(outJson);	
+		var outfile = 'output.json'
+		fs.writeFileSync(outfile, outJson);
+		console.log(outJson);	
 	});	
 };
 
