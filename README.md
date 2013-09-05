@@ -1,4 +1,4 @@
 vetroWebSite
 ============
 
-Vetro Web Site
+This is the repository for the Vetro landign page and marketign web site
