@@ -58,6 +58,7 @@
 	      font-size: 24px;
 	      line-height: 30px;
       }
+
       p.quotetext {
         font-style: italic;
         font-size: 24px;
@@ -83,7 +84,8 @@
       }
       
       .borderbox {
-        background-color: gray;
+        background-color: #d3d3d3;
+        margin-top: 60px;
       }
 
       .video, .thermometer, .order, .social, .statistics {
@@ -91,6 +93,24 @@
       }
       .statistics h3, .statistics p {
         color: white;
+      }
+
+      #pitch-list {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      #pitch-list a:link {
+        color: black;
+      }
+
+      #pitch-list a:visited {
+        color: black;
+      }
+
+      #pitch-list li {
+        padding: 10px;
+        line-height: 25px;
       }
    
       /* Marketing and Copy Footer */
@@ -184,33 +204,25 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Vetro consists of three modules: asset inventory mapping and display; 
-            demand generation; and project design and planning. 
+            Vetro makes it easier to target your fiber network investment and 
+                manage it for the long term. 
           </p>
-          <ol>
+          <ul id="pitch-list">
             <li>
-              <a href="#assetinventory"><strong>Asset inventory mapping and display</strong></a>
-
-              - planners and engineers will be able view assets, lit buildings, 
-              data centers, potential customers, rights-of-way, conduits, and 
-              other features through a simple mapping interface;
+              <a href="#demand">Track demand by neighborhood and drive interest to your project.</a>
             </li>
             <li>
-              <strong>Demand generation and tracking</strong> - tools that allow sales people and 
-              planners to estimate and track the demand for fiber in particular regions; and
+              <a href="#design">Quickly estimate project costs to determine the return on investment.</a>
             </li>
             <li>
-              <strong>Project Design and Planning</strong> - Vetro will provide simple features 
-              that allow fiber planners and engineers to design and plan new projects. 
-              Design and planning includes estimating the type and quantity of 
-              equipment that is required, poles and/or conduits that can be used 
-              to place the fiber, where splice points will occur, and what points 
-              of presence (POPs) will be used.
+              <a href="#assets">View your fiber network in relation to customer
+                  location and partner assets.</a>
             </li>
-          </ol>
+          </ul>
         </div>
-      
-        <div class="span5 action">
+
+        <!-- Input Form -->
+        <div class="span5 copy action">
           <form class="form-horizontal">
             <div class="control-group">
               <label class="control-label" for "inputFName">First Name</label>
@@ -239,7 +251,6 @@
               </div>
             </div>
           </form>
-          </br>
         </div>
         <div class="span4 offset2">
           <input class="btn btn-large btn-primary" type="submit" value="Send Me Information">
@@ -247,13 +258,18 @@
       </div> <!-- row-fluid section2 -->
 
       <!-- customer quote -->
-      <div class="row-fluid quote">
-        <div class="span10 offset1">
-          <p class="quotetext">"As a small fiber network provider Vetro is going to help
-              us generate/manage demand and design/construct our projects" - GWI</p>
+      <div class="row-fluid">
+        <div class="span10 offset1 borderbox">
+          <p class="quotetext">"As a small fiber network provider GWI will use Vetro to help
+              identify and manage demand as well as for project design and cost estimation" - Dave Allen, GWI</p>
         </div>
       </div>
       <!-- END CUSTOMER QUOTE -->
+
+      <!-- Details about Vetro Features -->
+
+
+
 
       <!-- For this FAQ, we introduce JS using the accordian -->
       <!-- This brings in jquery.js and boostrap.js as dependencies -->
@@ -266,11 +282,12 @@
               <div class="accordian-heading">
                 <a class="accordian-toggle" data-toggle="collapse"
                   data-parent="#accordian2" href="#collapseOne">
-                  What does FAQ stand for?
+                  What does Vetro stand for?
                 </a>
               </div>
               <div id="collapseOne" class="accordian-body collapse">
-                <div class="accordian-inner">Frequently Asked Question.</div>
+                <div class="accordian-inner">Vetro is Italian for glass, 
+                    the material that makes up a fiber strand.</div>
               </div>
             </div>
             <div class="accordian-group">
