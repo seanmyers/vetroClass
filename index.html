@@ -38,16 +38,12 @@
         }
       } 
       
-	  /*****************************************/
-	  /*   THIS IS NOEL'S COMMENT  */
-	  /***************************************/
-	 .section2 {
-		 border: 1px solid blue;
-	 }
-
       /* All form factors */
-
       /* Main body and headings */
+      #about {
+	      border: 1px solid red;
+      }
+      
       body {
         font-family: 'Open Sans', Helvetica,Arial,san-serif;		
       }
@@ -94,7 +90,7 @@
 	      background: #efefef;
       }
       .order {
-        padding: 2% 0%;
+	        border: 1px solid blue;
       }
       .actions {
         background-color: #343434;
@@ -135,10 +131,7 @@
       }
 
       /* Marketing and Copy Footer */
-      .modules-text {
-	      border: 1px solid green;
-      }
-      .modules-text > p {
+     .modules-text > p {
 	      text-align: center;
 	      font-weight: bold;
 	      font-size: 1.5em;
@@ -150,7 +143,6 @@
         padding-top: 2.5%;
         padding-bottom: 2.5%;
         text-align: justify;
-        border: 1px solid green;
       }
       .asset {
         padding: 2.5% 0%;
@@ -184,6 +176,7 @@
     </script>
     <!-- End Google Analytics -->
   </head>
+  
   <body>
     <!-- Mobile-friendly navbar adapted from example -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
@@ -196,13 +189,15 @@
 	          <span class="icon-bar"></span>
 	        </button>
 	        <a class="brand" href="#">Vetro</a>
+	        
 	        <div class="nav-collapse collapse">
 	          <ul class="nav">
 	            <li class="active"><a href="#">Home</a></li>
 	            <li><a href="#about">About</a></li>
 	            <li><a href="#contact">Contact</a></li>
 	          </ul>
-	        </div> <!-- /.nav-collapse -->
+	        </div><!-- /.nav-collapse -->
+	        
 	      </div>
       </div>
     </div>	
@@ -218,39 +213,30 @@
         <div class="span12">
           <h1>Vetro</h1>
         </div>
-      </div>
+      </div><!--row-fluid heading-->
+      
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
           <p class="lead">A Fiber Network Planning and Management Tool</p>
-        </div>
-      </div>
+        </div><!--span12-->
+      </div><!--row-fluid subheading-->
 
       <!--large image --> 
       <div class="row-fluid pitch">
-        <div class="span10 offset1 video">
-          <img class="img-polaroid" src="images/mac.png">
-        </div>
+        <div class="span10 offset1 video"><img class="img-polaroid" src="images/mac.png"></div>
       </div> <!-- row-fluid pitch -->
       
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
-          <p>
-            Vetro makes it easier to target your fiber network investment and 
-                manage it for the long term. 
-          </p>
+          <p>Vetro makes it easier to target your fiber network investment and manage it for the long term.</p>
+          
           <ul id="pitch-list">
-            <li>
-              Track demand by neighborhood and drive interest to your project.
-            </li>
-            <li>
-              Create project scenarios and estimate project costs.
-            </li>
-            <li>
-              View your fiber network assets including cables, poles, material, and equipment.
-            </li>
-          </ul>
+            <li>Track demand by neighborhood and drive interest to your project.</li>
+            <li>Create project scenarios and estimate project costs.</li>
+            <li>View your fiber network assets including cables, poles, material, and equipment.</li>
+          </ul><!--pitch-list-->
         </div><!--span5 offset1 copy copy-right-->
         
         <div class="span5 copy modules-text">                             
@@ -273,9 +259,9 @@
               to place the fiber, where splice points will occur, and what points
               of presence (POPs) will be used.                                  
             </li>                                                               
-          </ol>                                                                 
-        </div>        
-      </div>
+          </ol><!--details-list-->                                                              
+        </div><!--span5 copy modules-text-->      
+      </div><!--row-fluid section2-->
 
        
           <div class="row-fluid">
@@ -286,29 +272,29 @@
                 <a class="addthis_button_preferred_2"></a>
                 <a class="addthis_button_compact"></a>
                 <a class="addthis_counter addthis_bubble_style"></a>
-              </div>
+              </div><!--addthis_toolbox addthis_default_style addthis_32x32_style-->
               <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
               <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-521a3697044f6bab"></script>
               <!-- AddThis Button END -->                                       
-            </div>
-          </div>
+            </div><!--span8 offset3 social-->
+          </div><!--row-fluid -->
+          
         </div>
-      </div> <!-- row-fluid section2 -->
+    
 
       
       <!-- Details about Vetro Features -->
       <div id="about" class="row-fluid details">
         <div class="span5 offset1 copy">
           <img class="img-polaroid" src="images/screenshot.png"> 
-        </div>
+        </div><!--span5 offset1 copy-->
         
-         <!-- customer quote -->
+      <!-- CUSTOMER QUOTE -->
       <div class="row-fluid">
-        <div class="span10 offset1 borderbox">
-          <p class="quotetext">"As a small fiber network provider we will use Vetro to help
-              identify and manage demand as well as for project design and cost estimation" - Fiber Network Engineer</p>
-        </div> <!-- borderbox -->
-      </div>
+        <div class="span5 offset1 borderbox">
+          <p class="quotetext">"As a small fiber network provider we will use Vetro to help identify and manage demand as well as for project design and cost estimation" - Fiber Network Engineer</p>
+        </div><!--span10 offset1 borderbox -->
+      </div><!--row-fluid-->
       <!-- END CUSTOMER QUOTE -->
         
         
@@ -349,32 +335,31 @@
         </div>
       </div>
       
-	  <!-- Input Form -->
-        <div class="span5 copy action">
+	  <!-- INPUT FORM -->
+        <div class="span12 copy action">
           <div class="row-fluid">
             <form class="form-horizontal">
               <div class="control-group">
                 <label class="control-label" for "inputEmail">Your Email</label>
                 <div class="controls">
-                  <input class= "span12" type="text" id="inputEmail"
-                      placeholder="john@email.com">
-                </div>
-              </div>
+                  <input class= "span4" type="text" id="inputEmail"placeholder="john@email.com">
+                  <input class="btn btn-large btn-primary" type="submit" value="Send Me Information">
+                </div><!--controls-->
+                
+              </div><!--control-group-->
             </form>
-          </div>
-          <div class="span8 offset3 order">
-            <!-- Submit Button -->
-            <input class="btn btn-large btn-primary" type="submit" value="Send Me Information">
-          </div>
-
+          </div><!--row-fluid-->
+        </div><!--span5 copy action-->
+          
+        
      <div class="row-fluid footer">
       <div class="span12">
-        <p> This work is licensed under the <a href="http://creativecommons.org/
-            licenses/by-sa/3.0/">CC By-SA 3.0 </a>
-      </div>
-    </div>
+        <p> This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0 </a></p>
+      </div><!--span12-->
+    </div><!--row-fluid footer-->
     
-    </div> <!-- container -->
+    </div><!-- container -->
+    
     <!-- GOOGLE ANALYTICS -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -387,6 +372,8 @@
 
     </script>
     <!-- END GOOGLE ANALYTICS -->
+    
   </body>
 </html>
 
+</div>
